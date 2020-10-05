@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Courses</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap Template from w3school-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Google API font library-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
+  
+<style>
+  body {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: black;
+    background-image: url(lightMUarchbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background: rgb(44, 44, 44); 
+      background: rgba(44, 44, 44, 0.5);
+      color: white;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set background and 100% height */
+    .sidenav {
+      padding-top: 30px;
+      height: 100%;
+    }
+    
+    /* Set background color, white text and some padding */
+    footer {
+      background: rgb(44, 44, 44); /* Backup color */
+      background: rgba(44, 44, 44, 0.5);
+      color: white;
+      padding: 65px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 25px;
+      }
+      .row.content {height:auto;} 
+    }
+</style>
+</head>
+<body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="jkv1E5vm">
+    </script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">
+		<img width="130px" height="70px" src="bigM.png" style="position:relative;top:-22px">
+	  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/cs490-capstone/index.html#">Home</a></li>
+        <li><a href="/cs490-capstone/courses.html#">Courses</a></li>
+        <li><a href="/cs490-capstone/faculty.html#">Faculty</a></li>
+        <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav"> </div>
+    <div class="col-sm-8 text-center"> 
+      <h1>Course List</h1>
+      <h3>Mathematics & Computer Science Department</h3>
+      <h3>Mathematics</h3>
+        <hr style="height:3px;border-width:0;color:black;background-color:black">
+     <h3>Math 095 Fundamentals of Mathematics (3 Credits)</h3>
+     <h5>Topics include exponents, radicals, factoring, linear and quadratic equations, graphing of linear and polynomial functions, area, volume, systems of equations, and problem-solving. Normally offered fall and spring semesters.  This course does not satisfy the core math requirements.</h5>
+        
+     <h3>Math 120 Mathematics in the Liberal Arts (3 Credits)</h3>
+     <h5>Designed to implement NCTM curriculum standards with emphasis on problem-solving, patterns and relationships, functions, estimation, and mathematical connections to other disciplines. Topics are chosen from this list: functions, mathematical modeling, basic trigonometry, geometry, astronomy, music, elementary statistics, voting methods, and logic. No prior knowledge of any of these topics is assumed.  Normally offered fall and spring semesters.  There are no prerequisites for MATH 120.</h5>
+        
+     <h3>Math 130 Mathematics for Contemporary Society (3 Credits)</h3>
+     <h5>The topics studied will include techniques and applications of set theory, counting techniques, matrices, linear systems, statistics and probability, and linear programming.  Normally offered fall and spring semesters.  Prerequisite:  a passing grade (at least a 40%) on the Math Placement Exam.</h5>
+        
+     <h3>Math 155 Statistics for the Behavioral and Social Sciences (3 Credits)</h3>
+     <h5>Surveys the basic statistical concepts applicable to problems in the behavioral and social sciences. Includes descriptive statistics, regression and correlative, hypothesis testing, nonparametric methods, and analysis of variance. Computer software will be utilized for calculations. Normally offered fall, spring, and summer I semesters.  Prerequisite:  a passing grade (at least a 40 %) on the Math Placement Exam.</h5>
+        
+     <h3>Math 160 Analysis of Functions (Pre-calculus) (3 Credits)</h3>
+     <h5>Topics include polynomial, rational, exponential, logarithmic and trigonometric functions, as well as conic sections. Normally offered fall and spring semesters.  Prerequisite:  a passing grade (at least a 40%) on the Math Placement Exam.</h5>
+        
+     <h3>Math 170 Applications of Mathematics to Biology (3 Credits)</h3>
+     <h5>Examines problems in biology through the use of a variety of mathematical tools and models. Topics are chosen from linear, exponential, and logarithmic functions, set theory, linear systems, probability, and an introduction to calculus.  Normally offered spring and summer I semesters. Prerequisites: algebra and trigonometry. Prerequisite: C or better in MATH 160, or passing the Math Placement Exam with at least a 75%.</h5>
+        
+     <h3>Math 211 Calculus I (4 Credits)</h3>
+     <h5>Limits, continuity, and differentiation of algebraic and transcendental functions; applications of differentiation to related rates and optimization problems; extremum and concavity of functions; antiderivatives, integrals and the Fundamental Theorem of Calculus; and integration by substitution.  Normally offered spring semester.  Prerequisites:  algebra and trigonometry, or at least a grade of C in MATH 160, or passing the Math Placement Exam with at least a 75%.</h5>
+        
+     <h3>Math 212 Calculus II (4 Credits)</h3>
+     <h5>Techniques of integration including integration of logarithmic, exponential, gyperbolic, trigonometric and inverse functions; improper integrals; infinite sequences and series; parametric equations; polar coordinates and polar graphs.  Normally offered fall semester.  Prerequisite: MATH 211.</h5>
+        
+     <h3>Math 213 Calculus III (4 Credits)</h3>
+     <h5>Vectors; lines and planes in three-dimensional space; vector-valued functions; functions of several variables; partial derivatives; multiple integrals; and vector Calculus. Normally offered spring semester.  Prerequisite: MATH 212.</h5>
+        
+     <h3>Math 219 History of Mathematics (3 Credits)</h3>
+     <h5>The study of mathematical concepts from arithmetic to calculus in their historical perspective. This study will be supplemented by historical background material, biographies of mathematicians and translations of source manuscripts in which mathematical discoveries were first announced. Attention will be given to the relationship of mathematics to other disciplines. For Mathematics majors and minors. Normally offered fall semester.</h5>
+        
+     <h3>Math 220 Introduction to Probability and Statistics (3 Credits)</h3>
+     <h5>Acquaints the student with elements of probability, Bayes theorem, measures of central tendency, dispersion, probability distribution, hypothesis tests, nonparametric tests, linear regression, and correlation.</h5>
+        
+     <h3>Math 311 Differential Equations (3 Credits)</h3>
+     <h5>The study of differential equations and first-order linear systems through a combination of analytical, numerical, and qualitative techniques. Topics include the standard analytical methods of solving nth-order linear equations, eigenvalues and eigenvectors for systems, phase-plane trajectories, the Laplace transform, and numerical approximations. Technology is used in conjunction with theory to approximate and analyze solutions. Modeling physical phenomena is emphasized through a rich variety of applications. Prerequisite: MATH 212.</h5>
+        
+     <h3>Math 321 Abstract Algebra (3 Credits)</h3>
+     <h5>Provides an introduction to groups, rings, ideals, integral domains and fields. Normally offered even numbered spring semesters.  rerequisite: MATH 211.</h5>
+        
+     <h3>Math 322 Linear Algebra (2 Credits)</h3>
+     <h5>Deals with vector spaces, matrices, linear transformations, canonical forms, and determinants. Must be taken with MATH 322L. Prerequisite: MATH 211.</h5>
+        
+     <h3>Math 322L Linear Algebra Lab (1 Credit)</h3>
+     <h5>Laboratory to accompany MATH 322 in order to use a computer algebra system (such as Mathematica or Maple) to provide visual re-enforcement of central concepts. Must be taken with MATH 322.</h5>
+        
+     <h3>Math 323 Theory of Numbers (3 Credits)</h3>
+     <h5>An introduction to basic number theory: properties of the integers, congruence, Fermat's and Wilson's Theorem, number theoretic functions, Diophantine equations, and primes. Normally offered odd numbered fall semesters.  Prerequisite: MATH 211.</h5>
+        
+     <h3>Math 324 College Geometry (3 Credits)</h3>
+     <h5>The study of axiomatic systems and the notions of proof and consistency. Examines finite, elliptical, and hyperbolic geometries, and advanced topics in Euclidean Geometry. Software is used to enhance exploration and discovery of theorems. Prerequisite: MATH 211.</h5>
+        
+     <h3>Math 411B Curriculum Methods and Materials in Mathematics (3 Credits)</h3>
+     <h5>See EDUC 411.</h5>
+        
+     <h3>Math 420 Discrete Mathematics (3 Credits)</h3>
+     <h5>An introduction to the algebraic concepts, methods, and techniques that form the theoretical basis for computer science, including relevant areas of logic, set theory, relations and functions, and Boolean algebra. Prerequisite: MATH 212.</h5>
+        
+     <h3>Math 425 Topology (3 Credits)</h3>
+     <h5>Introduction to point-set topology at the undergraduate level. Topics include topological spaces, limit points, continuity, connectedness, compactness, separability, and the fundamental group. Prerequisite: MATH 213.</h5>
+        
+     <h3>Math 430 Real Analysis (3 Credits)</h3>
+     <h5>An introduction to the analysis of real numbers, variables, and functions. Topics include the topology of the real numbers, sequences and series, limits, continuity and uniform continuity, differentiation, the Riemann integral, and sequences of functions. Prerequisite: MATH 213.</h5>
+        
+     <h3>Math 440 Complex Variables (3 Credits)</h3>
+     <h5>An introduction to the theory of complex numbers, variables, and functions. Topics include transformations and mappings, elementary and analytic functions, complex integration and Cauchy’s theorem, Taylor and Laurent expansions, residues, harmonic functions, and conformal mappings. Prerequisite: MATH 213.</h5>
+        
+     <h3>Math 447 Special Projects (Variable Credits)</h3>
+     <h5>Definition, formulation, solution, documentation, and testing of a problem under close faculty supervision.</h5>
+        
+     <h3>Math 456 Mathematical Statistics (3 Credits)</h3>
+     <h5>Deals with probability distributions, limit theorems, estimation, hypothesis tests, correlation and regression, analysis of variance. Prerequisites: MATH 213, 220.</h5>
+        
+     <h3>Math 495 Senior Seminar (3 Credits)</h3>
+     <h5>Analysis of the underlying foundational questions of mathematics including the notions of proof and consistency within a specific mathematical framework. Examination of the considerable impact of mathematics on culture and society from ancient to modern times.</h5>
+        
+     <h3>Math 498 Special Topics (Variable Credits)</h3>
+     <h5>Special topics in mathematics.</h5>
+    </div>
+    <div class="col-sm-2 sidenav"> </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <!-- like & share button code -->
+    <div class="fb-like" 
+         data-href="https://developers.facebook.com/docs/plugins/" 
+         data-width="" 
+         data-layout="button" 
+         data-action="like" 
+         data-size="large" 
+         data-share="false">
+    </div>
+    <a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</footer>
+</body>
+</html>

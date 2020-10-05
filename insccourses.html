@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Courses</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap Template from w3school-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Google API font library-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
+  
+<style>
+  body {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: black;
+    background-image: url(lightMUarchbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+	  background: rgb(44, 44, 44); 
+      background: rgba(44, 44, 44, 0.5);
+      color: white;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set background and 100% height */
+    .sidenav {
+      padding-top: 30px;
+      height: 100%;
+    }
+    
+    /* Set background color, white text and some padding */
+    footer {
+      background: rgb(44, 44, 44); /* Backup color */
+      background: rgba(44, 44, 44, 0.5);
+      color: white;
+      padding: 65px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 25px;
+      }
+      .row.content {height:auto;} 
+    }
+</style>
+</head>
+<body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="jkv1E5vm">
+    </script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">
+		<img width="130px" height="70px" src="bigM.png" style="position:relative;top:-22px">
+	  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/cs490-capstone/index.html#">Home</a></li>
+        <li><a href="/cs490-capstone/courses.html#">Courses</a></li>
+        <li><a href="/cs490-capstone/faculty.html#">Faculty</a></li>
+        <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav"> </div>
+    <div class="col-sm-8 text-center"> 
+      <h1>Course List</h1>
+      <h3>Mathematics & Computer Science Department</h3>
+      <h3>Information Security</h3>
+        <hr style="height:3px;border-width:0;color:black;background-color:black">
+     <h3>INSC 410/510 Legal Issues in Information Security (3 Credits)</h3>
+     <h5>This course is an introduction to the legal and regulatory issues in the field of information security. Federal laws and regulations, including OMB and NIST standards, are examined. Moral and ethical issues for professionals in the field are also considered.</h5>
+        
+     <h3>INSC 420/520 Introduction to Computer Security (3 Credits)</h3>
+     <h5>This course is an introduction to the fundamental principles and common practices of computer and information security. It provides an overview of such topics as cryptography, network intrusion and detection, software and operating system security, VPN etc. Prerequisite: CS 242, CS 322.</h5>
+        
+     <h3>INSC 430/530 Network Security (3 Credits)</h3>
+     <h5>This course is an introduction to the fundamental principles and common practices of computer and information security. It provides an overview of such topics as cryptography, network intrusion and detection, software and operating system security, VPN etc. Prerequisite: CS 242, CS 322.</h5>
+        
+     <h3>INSC 440/540 Introduction to Cryptograpghy (3 Credits)</h3>
+     <h5>This course is an introduction to the theory and practice in the field of cryptography. Topics include classic and modern ciphers (DES, AES, RSA etc.), digital signature, message digest, key exchange protocols, and PKI. Prerequisite: CS 150, MATH 323.</h5>
+        
+     <h3>INSC 445/545 Security Policies and Implementations (3 Credits)</h3>
+     <h5>This course provides an overview of the best practices of developing and implementing effective organizational policies and programs on information security. Topics include privacy, contingency response, infrastructure reliability, risk assessment and management, and organizational roles and responsibilities.</h5>
+        
+     <h3>INSC 450/550 Digital Forensics (3 Credits)</h3>
+     <h5>This course introduces students to the field of digital forensics and it will focus on the contemporary policy issues and applied technologies. Topics to be covered include: legal and regulatory issues, investigation techniques, data analysis approaches, and incident response procedures for Windows and UNIX systems. Prerequisite: CS 242, CS 245.</h5>
+        
+     <h3>INSC 560 Applied Cryptography and Secure Communication (3 Credits)</h3>
+     <h5>This course studies real world cryptographic systems and examines their strength and weaknesses. Some commonly deployed cryptosystems will be used as examples in this course. Prerequisite: INSC 440/540.</h5>
+        
+     <h3>INSC 565 Operating Systems Security (3 Credits)</h3>
+     <h5>This course covers the fundamental theory and practice in Operating System security. OS level security architectures and mechanisms will be studied. Topics include OS level security architectures and mechanism, OS security policies, and basic OS security techniques. Prerequisite: CS 344.</h5>
+        
+     <h3>INSC 590 Special Topics in Inormation Security (3 Credits)</h3>
+     <h5>Special topics that are not available in other courses may be covered when there is enough interest among students and faculty.</h5>
+        
+     <h3>INSC 620 Cloud Computing Security (3 Credits)</h3>
+     <h5>This course investigates the security issues related to cloud computing, such as confidentiality, integrity, and availability of data and computations. Practical applications of secure cloud computing will be explored, current research publications will be the focus of this course. Prerequisite: INSC 420/520.</h5>
+        
+     <h3>INSC 630 Data Protection and Recovery (3 Credits)</h3>
+     <h5>In this course, students will study computer file storage systems, with the focus on data protection and recovery. Topics include data backups, diversification, RAID systems, disaster response and recovery etc. Prerequisite: INSC 420/520.</h5>
+        
+     <h3>INSC 640 Mobile System Security (3 Credits)</h3>
+     <h5>This course will investigate security issues in mobile systems. When devices such as smart phones and tablets are carrying more and more personal as well as business data, security threats from mobile systems must be dealt with by developing consistent security policies and implementing effective security programs across all platforms. Both policy and technical considerations will be covered in this course. Prerequisite: INSC 420/520.</h5>
+        
+     <h3>INSC 650 Corporate Information Security (3 Credits)</h3>
+     <h5>This course examines information security in the corporate environment. Common sources of security threats are identified and addressed. Technological, human behavioral, and policy solutions are considered. Further topics include incident response, legal issues, and public relations. Prerequisite: INSC 410/510.</h5>
+    </div>
+    <div class="col-sm-2 sidenav"> </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+    <!-- like & share button code -->
+    <div class="fb-like" 
+         data-href="https://developers.facebook.com/docs/plugins/" 
+         data-width="" 
+         data-layout="button" 
+         data-action="like" 
+         data-size="large" 
+         data-share="false">
+    </div>
+    <a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</footer>
+</body>
+</html>
