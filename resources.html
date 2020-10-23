@@ -10,54 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--Google API font library-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
-  
-<style>
-  body {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: black;
-    background-image: url(lightMUarchbackground.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-    
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-	  background: rgb(44, 44, 44); 
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set background and 100% height */
-    .sidenav {
-      padding-top: 30px;
-      height: 100%;
-    }
-    
-    /* Set background color, white text and some padding */
-    footer {
-      background: rgb(44, 44, 44); /* Backup color */
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-      padding: 65px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 25px;
-      }
-      .row.content {height:auto;} 
-    }
-    
-    li a{color:white;}
-</style>
+  <link rel="stylesheet" href="mustyle.css">
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -78,18 +31,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/cs490-capstone/index.html#">Home</a></li>
+        <li><a href="/cs490-capstone/index.html#">Home</a></li>
         <li><a href="/cs490-capstone/courses.html#">Courses</a></li>
         <li><a href="/cs490-capstone/faculty.html#">Faculty</a></li>
-        <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
+        <li class="active"><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/cs490-capstone/signin.html#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav"> </div>
@@ -98,17 +50,17 @@
       <h3>Mathematics & Computer Science Department</h3>
       <hr style="height:3px;border-width:0;color:black;background-color:black">
         <h3>Career Outlook for Computer Science and Mathematics</h3>
-            <li><a href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm">Computer & Information Technology</a></li>
-            <li><a href="https://www.bls.gov/ooh/math/home.htm">Mathematics</a></li>
+            <li><a href="https://www.bls.gov/ooh/computer-and-information-technology/home.htm" title="Bureau of Labor Statistics">Computer & Information Technology</a></li>
+            <li><a href="https://www.bls.gov/ooh/math/home.htm" title="Bureau of Labor Statistics">Mathematics</a></li>
      <hr style="height:3px;border-width:0;color:black;background-color:black">
         <h3>Job & Internship Opportunities</h3>
-            <li><a href="https://www.indeed.com/q-Computer-Science-l-Scranton,-PA-jobs.html?vjk=18e27eab2ccedd80">Computer Science</a></li>
-            <li><a href="https://www.indeed.com/jobs?q=mathematics&l=Scranton%2C%20PA&vjk=82a51132cc588072">Mathematics</a></li>
+            <li><a href="https://www.indeed.com/q-Computer-Science-l-Scranton,-PA-jobs.html?vjk=18e27eab2ccedd80" title="Indeed Listings">Computer Science</a></li>
+            <li><a href="https://www.indeed.com/jobs?q=mathematics&l=Scranton%2C%20PA&vjk=82a51132cc588072" title="Indeed Listings">Mathematics</a></li>
+            <li><a href="https://www.indeed.com/q-Computer-Security-l-Scranton,-PA-jobs.html?vjk=e100929efc34b0cd" title="Indeed Listings">Informtion Security</a></li>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
-
 <footer class="container-fluid text-center">
     <!-- like & share button code -->
     <div class="fb-like" 
@@ -121,6 +73,5 @@
     </div>
     <a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </footer>
-
 </body>
 </html>

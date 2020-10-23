@@ -10,53 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--Google API font library-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
-  
-<style>
-  body {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: black;
-    background-image: url(lightMUarchbackground.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-    
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-	  background: rgb(44, 44, 44); 
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set background and 100% height */
-    .sidenav {
-      padding-top: 30px;
-      height: 100%;
-    }
-    
-    /* Set background color, white text and some padding */
-    footer {
-      background: rgb(44, 44, 44); /* Backup color */
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-      padding: 65px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 25px;
-      }
-      .row.content {height:auto;} 
-    }
-    
-</style>
+  <link rel="stylesheet" href="mustyle.css">
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -77,18 +31,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/cs490-capstone/index.html#">Home</a></li>
-        <li><a href="/cs490-capstone/courses.html#">Courses</a></li>
+        <li><a href="/cs490-capstone/index.html#">Home</a></li>
+        <li class="active"><a href="/cs490-capstone/courses.html#">Courses</a></li>
         <li><a href="/cs490-capstone/faculty.html#">Faculty</a></li>
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav"> </div>
@@ -135,11 +88,11 @@
         
      <h3>INSC 650 Corporate Information Security (3 Credits)</h3>
      <h5>This course examines information security in the corporate environment. Common sources of security threats are identified and addressed. Technological, human behavioral, and policy solutions are considered. Further topics include incident response, legal issues, and public relations. Prerequisite: INSC 410/510.</h5>
+     <a href="/cs490-capstone/courses.html#" title="Go to Courses">Back to Courses</a>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
-
 <footer class="container-fluid text-center">
     <!-- like & share button code -->
     <div class="fb-like" 
