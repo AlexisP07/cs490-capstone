@@ -1,26 +1,28 @@
 <html>
  <head>
-  <title>Login</title>
+  <title>Register</title>
  </head>
  <body>
+<?php  
 
-<?php
-
-if ($_POST['Login']){
-
-$myFile = "register.txt";
-$fh = fopen($myFile, 'a') or die("can't open file");
-$stringData = $_POST['email'] . ":";
-fwrite($fh, $stringData);
-$stringData = $_POST['username'] . ":";
-fwrite($fh, $stringData);
-$stringData = $_POST['password'] . ":";
-fwrite($fh, $stringData);
-$stringData = $_POST['repeatpassword'] . "\n";
-fwrite($fh, $stringData);
-fclose($fh);
-
-} ?>
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['psw'];
+    $passwordRepeat = $_POST['psw-repeat'];
+     
+    $conn = new mysqli('localhost', 'root', '', 'capstone');
+    if($conn->connect_error){
+        die('Connection Failed : '.$conn->connect_error);
+    }
+    else {
+        $stmt = $conn->prepare("INSERT into register(email, username, password, passwordRepeat) values(?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $email, $username, $password, $passwordRepeat);
+        $stmt->execute();
+        $stmt->close();
+    }
+    
+    mysqli_close($conn);
+ ?>
 
 <script>location.href="/cs490-capstone/index.html#";</script>
 	 

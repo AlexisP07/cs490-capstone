@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Marywood University Computer Science Department</title>
+  <title>Faculty</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap Template from w3school-->
@@ -31,9 +31,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/cs490-capstone/index.html#">Home</a></li>
+        <li><a href="/cs490-capstone/index.html#">Home</a></li>
         <li><a href="/cs490-capstone/courses.html#">Courses</a></li>
-        <li><a href="/cs490-capstone/faculty.php#">Faculty</a></li>
+        <li class="active"><a href="/cs490-capstone/faculty.html#">Faculty</a></li>
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -46,16 +46,33 @@
   <div class="row content">
     <div class="col-sm-2 sidenav"> </div>
     <div class="col-sm-8 text-center"> 
-      <h1>Marywood University</h1>
+      <h1>Faculty</h1>
       <h3>Mathematics & Computer Science Department</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
-      <h2>Receive your Bachelors of Science in one of our programs:</h2>
-      <p>Computer Science</p>
-      <p>Information Security</p>
-      <p>Mathematics</p>
-      <p>Mathematics/Secondary Education</p>
-        <hr style="height:3px;border-width:0;color:black;background-color:black">
-      <h2>Look around this site for more information!</h2>
+    <?php
+
+        $conn = mysqli_connect("localhost", "root", "", "capstone");
+        
+        if(! $conn){
+            die("Connection failed : ". mysqli_connect_error());
+        }
+
+        $sql = "CALL getAllFaculty";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+        
+            while($row = $result->fetch_assoc()) {
+                $Name = $row["Name"];
+                $Email = $row["Email"];
+                $Area = $row["Area"];
+                $Office = $row["Office"];
+                $Phone_Number = $row["Phone_Number"];
+            echo $Name . " " . $Email . " " . $Area . " " . $Office . " " . $Phone_Number . "<br>";
+          }
+        }
+    mysqli_close($conn);
+    
+    ?> 
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
