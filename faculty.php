@@ -49,6 +49,7 @@
       <h1>Faculty</h1>
       <h3>Mathematics & Computer Science Department</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
+    <h4>
     <?php
 
         $conn = mysqli_connect("localhost", "root", "", "capstone");
@@ -59,25 +60,41 @@
 
         $sql = "CALL getAllFaculty";
         $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
+
+        echo "<table border='1'>
+              <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Area</th>
+              <th>Office</th>
+              <th>Phone</th>
+              </tr>";
         
-            while($row = $result->fetch_assoc()) {
-                $Name = $row["Name"];
-                $Email = $row["Email"];
-                $Area = $row["Area"];
-                $Office = $row["Office"];
-                $Phone_Number = $row["Phone_Number"];
-            echo $Name . " " . $Email . " " . $Area . " " . $Office . " " . $Phone_Number . "<br>";
-          }
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td>" . $row['Name'] . "</td>";
+            echo "<td>" . $row['Email'] . "</td>";
+            echo "<td>" . $row['Area'] . "</td>";
+            echo "<td>" . $row['Office'] . "</td>";
+            echo "<td>" . $row['Phone_Number'] . "</td>";
+            echo "</tr>";
         }
+        
+        echo "</table>";
+        
     mysqli_close($conn);
     
     ?> 
+        </h4>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
 <footer class="container-fluid text-center">
+    <h5>
+    <p>2300 Adams Avenue Scranton, PA 18509</p>
+    <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>
+    </h5>
     <!-- like & share button code -->
     <div class="fb-like" 
          data-href="https://developers.facebook.com/docs/plugins/" 

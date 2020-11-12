@@ -5,26 +5,38 @@
  <body>
 <?php  
 
+    function check_email_exist($conn, $email){
+        $sql = "CALL verifyEmail";
+        $result = $conn->query($sql);
+        if ($result > 0)
+            echo '<script>alert("Registration Successful!")</script>';
+        else
+            echo '<script>alert("This email is already in use, please try again.")</script>';
+    }
+     
     $email = $_POST['email'];
     $username = $_POST['username'];
     $password = $_POST['psw'];
     $passwordRepeat = $_POST['psw-repeat'];
-     
+    $passwordHash = password_hash($password, PASSWORD_BCRYPT);
+    
     $conn = new mysqli('localhost', 'root', '', 'capstone');
-    if($conn->connect_error){
+     
+    if(empty($_POST['email'])){
         die('Connection Failed : '.$conn->connect_error);
     }
-    else {
+    else{
         $stmt = $conn->prepare("INSERT into register(email, username, password, passwordRepeat) values(?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $email, $username, $password, $passwordRepeat);
-        $stmt->execute();
-        $stmt->close();
+        $stmt->bind_param('ssss', $email, $username, $passwordHash, $passwordRepeat);
+        
+        if( $stmt->execute() )
+            check_email_exist($conn, $email);
+        else
+            $stmt->close();
     }
-    
+     
     mysqli_close($conn);
  ?>
-
-<script>location.href="/cs490-capstone/index.html#";</script>
-	 
+    <script>location.href="/cs490-capstone/index.html#";</script>
  </body>
 </html>

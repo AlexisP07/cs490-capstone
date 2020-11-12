@@ -37,7 +37,7 @@
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="/cs490-capstone/signin.html#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
@@ -48,16 +48,47 @@
     <div class="col-sm-8 text-center"> 
       <h1>Course List</h1>
       <h3>Mathematics & Computer Science Department</h3>
+      <h3>Astronomy</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
-     <li><a href="/cs490-capstone/astronomycourses.php#" title="Go to Astronomy Courses">Astronomy</a></li>
-     <li><a href="/cs490-capstone/cscourses.php#" title="Go to Computer Science Courses">Computer Science</a></li>
-     <li><a href="/cs490-capstone/insccourses.php#" title="Go to Information Security Courses">Information Security</a></li>
-     <li><a href="/cs490-capstone/mathcourses.php#" title="Go to Mathematics Courses">Mathematics</a></li>
+        <h4>
+    <?php
+
+        $conn = mysqli_connect("localhost", "root", "", "capstone");
+        
+        if(! $conn){
+            die("Connection failed : ". mysqli_connect_error());
+        }
+
+        $sql = "CALL getAstrCourses";
+        $result = $conn->query($sql);
+
+        echo "<table border='1'>
+              <tr>
+              <th>Course Number</th>
+              <th>Course Name</th>
+              <th>Credits</th>
+              </tr>";
+        
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td>" . $row['courseNum'] . "</td>";
+            echo "<td>" . $row['courseName'] . "</td>";
+            echo "<td>" . $row['credits'] . "</td>";
+            echo "</tr>";
+        }
+        
+        echo "</table>";
+        
+    mysqli_close($conn);
+    
+    ?> 
+            </h4>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
 <footer class="container-fluid text-center">
+    <p><a href="/cs490-capstone/courses.html#" title="Go to Courses">Back to Courses</a></p>
     <h5>
     <p>2300 Adams Avenue Scranton, PA 18509</p>
     <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>

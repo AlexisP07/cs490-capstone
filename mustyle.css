@@ -1,11 +1,42 @@
+html { height: 100%; }
 body {
     font-family: 'Playfair Display', serif;
     font-size: 22px;
     color: black;
     background-image: url(lightMUarchbackground.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-size: cover;
-  }
+    min-height:100%; 
+    position:relative; 
+    padding-bottom:[footer-height]
+}
+
+table {
+    border: 3px solid black;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+th {
+    border: 3px solid black;
+    color: white;
+    background-color: dimgrey;
+    text-align: center;
+    padding: 12px;
+}
+
+tr:nth-child(even){
+    border: 3px solid black;
+    color: lightgoldenrodyellow;
+    background-color: darkgreen;
+}
+
+tr:nth-child(odd){
+    border: 3px solid black;
+    color: darkgreen;
+    background-color: lightgoldenrodyellow;
+}
 
 li a {
   color: darkgreen;
@@ -35,10 +66,9 @@ a {
     
     /* Set background color, white text and some padding */
     footer {
-      background: rgb(44, 44, 44); /* Backup color */
       background: rgba(44, 44, 44, 0.5);
       color: white;
-      padding: 65px;
+      padding: 40px;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -56,7 +86,7 @@ a {
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  padding: 10px;
   background-image: url(lightMUarchbackground.jpg);
 }
 
