@@ -64,6 +64,12 @@ a {
       height: 100%;
     }
     
+    .flexcontainer {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
     /* Set background color, white text and some padding */
     footer {
       background: rgba(44, 44, 44, 0.5);
@@ -77,7 +83,10 @@ a {
         height: auto;
         padding: 25px;
       }
-      .row.content {height:auto;} 
+      .row.content {height:auto;}
+      .flexcontainer {
+        display: block;
+      }
     }
 /*register form*/
 * {
