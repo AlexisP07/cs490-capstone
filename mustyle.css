@@ -39,7 +39,7 @@ tr:nth-child(odd){
 }
 
 li a {
-  color: darkgreen;
+  color: white;
 }
 
 a {
@@ -68,7 +68,7 @@ a {
     footer {
       background: rgba(44, 44, 44, 0.5);
       color: white;
-      padding: 40px;
+      padding: 35px;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */

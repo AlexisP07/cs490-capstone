@@ -36,7 +36,7 @@
     mysqli_close($conn);
  ?>
 
-<!--<script>location.href="/cs490-capstone/index.html#";</script>-->
+<script>location.href="/cs490-capstone/index.html#";</script>
 	 
  </body>
 </html>
