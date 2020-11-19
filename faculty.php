@@ -15,8 +15,7 @@
 <body>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="jkv1E5vm">
-    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="lyvpSC5L"></script>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -95,16 +94,10 @@
     <p>2300 Adams Avenue Scranton, PA 18509</p>
     <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>
     </h5>
-    <!-- like & share button code -->
-    <div class="fb-like" 
-         data-href="https://developers.facebook.com/docs/plugins/" 
-         data-width="" 
-         data-layout="button" 
-         data-action="like" 
-         data-size="large" 
-         data-share="false">
+    <div>
+        <div class="fb-like" data-href="https://www.facebook.com/marywoodu/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+        <div class position="relative"><a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a></div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-    <a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </footer>
 </body>
 </html>

@@ -11,6 +11,11 @@ body {
     padding-bottom:[footer-height]
 }
 
+ul {
+    display: inline-block;
+    text-align:left;
+}
+
 table {
     border: 3px solid black;
     width: 100%;
@@ -67,7 +72,7 @@ a {
     .flexcontainer {
         display: flex;
         align-items: center;
-        color: white;
+        color: seashell;
     }
 
     /* Set background color, white text and some padding */
@@ -134,11 +139,6 @@ hr {
 
 .registerbtn:hover {
   opacity: 1;
-}
-
-/* Add a blue text color to links */
-a {
-  color: darkgreen;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
