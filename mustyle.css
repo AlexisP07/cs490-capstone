@@ -16,7 +16,8 @@ ul {
     text-align:left;
 }
 
-table {
+/* table stylings */
+table {         
     border: 3px solid black;
     width: 100%;
     color: black;
@@ -51,60 +52,54 @@ a {
   color: darkgreen;
 }
 
-/* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-	  background: rgb(44, 44, 44); 
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set background and 100% height */
-    .sidenav {
-      padding-top: 30px;
-      height: 100%;
-    }
-    
-    .flexcontainer {
-        display: flex;
-        align-items: center;
-        color: seashell;
-    }
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background: rgb(44, 44, 44); 
+  background: rgba(44, 44, 44, 0.5);
+  color: white;
+}
 
-    /* Set background color, white text and some padding */
-    footer {
-      background: rgba(44, 44, 44, 0.5);
-      color: white;
-      padding: 35px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 25px;
-      }
-      .row.content {height:auto;}
-      .flexcontainer {
-        display: block;
-      }
-    }
+.row.content {height: 450px}
+
+.sidenav {
+  padding-top: 30px;
+  height: 100%;
+}
+
+.flexcontainer {
+    display: flex;
+    align-items: center;
+    color: seashell;
+}
+
+footer {
+  background: rgba(44, 44, 44, 0.5);
+  color: white;
+  padding: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 25px;
+  }
+  .row.content {height:auto;}
+  .flexcontainer {
+    display: block;
+  }
+}
+
 /*register form*/
 * {
   box-sizing: border-box;
 }
 
-/* Add padding to containers */
 .container {
   padding: 10px;
   background-image: url(lightMUarchbackground.jpg);
 }
 
-/* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -119,13 +114,11 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* Overwrite default styles of hr */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
 
-/* Set a style for the submit button */
 .registerbtn {
   background-color: #4CAF50;
   color: white;
@@ -141,7 +134,6 @@ hr {
   opacity: 1;
 }
 
-/* Set a grey background color and center the text of the "sign in" section */
 .signin {
   background-color: #f1f1f1;
   text-align: center;
