@@ -59,13 +59,28 @@
             die("Connection failed : ". mysqli_connect_error());
         }
 
-        $sql = "CALL getCsDetail"; /* getting cs course detail from db */
+        $courseNum = htmlspecialchars($_GET["courseNum"]);
+        $sql = "SELECT * FROM cscourses WHERE courseNum='" . $courseNum . "'"; /* getting selected cs course details from db */
         $result = $conn->query($sql);
             
-         while($row = mysqli_fetch_array($result)){
-            echo $row['detail'];
-            echo "<p></p>";
+        echo "<table border='1'>
+              <tr>
+              <th>Course Number</th>
+              <th>Course Name</th>
+              <th>Credits</th>
+              <th>Description</th>
+              </tr>";
+        
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td>" . $row['courseNum'] . "</td>";
+            echo "<td>" . $row['courseName'] . "</td>";
+            echo "<td>" . $row['credits'] . "</td>";
+            echo "<td>" . $row['detail'] . "</td>";
+            echo "</tr>";
         }
+        
+        echo "</table>";
         
         mysqli_close($conn);
     

@@ -73,7 +73,7 @@
         
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
-            echo "<td><a href=mathdetail.php?".$row['courseNum'].">".$row['courseNum']."</a></td>";
+            echo "<td><a href=mathdetail.php?courseNum=".urlencode($row['courseNum']).">".$row['courseNum']."</a></td>";
             echo "<td>" . $row['courseName'] . "</td>";
             echo "<td>" . $row['credits'] . "</td>";
             echo "</tr>";
