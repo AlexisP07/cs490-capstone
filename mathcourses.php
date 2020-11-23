@@ -11,6 +11,9 @@
 <!--Google API font library-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
   <link rel="stylesheet" href="mustyle.css">
+  <style>
+    a { color: dimgrey; } 
+  </style>
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -70,7 +73,7 @@
         
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
-            echo "<td>" . $row['courseNum'] . "</td>";
+            echo "<td><a href=mathdetail.php?".$row['courseNum'].">".$row['courseNum']."</a></td>";
             echo "<td>" . $row['courseName'] . "</td>";
             echo "<td>" . $row['credits'] . "</td>";
             echo "</tr>";
@@ -87,7 +90,7 @@
   </div>
 </div>
 <footer class="container-fluid text-center">
-    <p><a href="/cs490-capstone/courses.html#" title="Go to Courses">Back to Courses</a></p>
+    <p><a class="link" href="/cs490-capstone/courses.html#" title="Go to Courses">Back to Courses</a></p>
     <h5>
     <p>2300 Adams Avenue Scranton, PA 18509</p>
     <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>

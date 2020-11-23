@@ -11,9 +11,6 @@
 <!--Google API font library-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
   <link rel="stylesheet" href="mustyle.css">
-  <style>
-    a { color: dimgrey; } 
-  </style>
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -34,12 +31,12 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="/cs490-capstone/index.html#">Home</a></li>
-        <li class="active"><a href="/cs490-capstone/courses.html#">Courses</a></li>     <!-- current page -->
+        <li class="active"><a href="/cs490-capstone/courses.html#">Courses</a></li> <!-- current page -->
         <li><a href="/cs490-capstone/faculty.php#">Faculty</a></li>
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>     <!-- login/register area -->
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> <!-- login / register -->
       </ul>
     </div>
   </div>
@@ -52,8 +49,9 @@
       <h3>Mathematics & Computer Science Department</h3>
       <h3>Computer Science</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
-     <h4>
-    <?php
+    <h4>Course Details</h4>
+        <hr style="height:3px;border-width:0;color:black;background-color:black">
+    <?php 
 
         $conn = mysqli_connect("localhost", "root", "", "capstone");
         
@@ -61,41 +59,28 @@
             die("Connection failed : ". mysqli_connect_error());
         }
 
-        $sql = "CALL getCsCourses";     /* collecting all data from cs db, formatting into table */
+        $sql = "CALL getCsDetail"; /* getting cs course detail from db */
         $result = $conn->query($sql);
-
-        echo "<table border='1'>
-              <tr>
-              <th>Course Number</th>
-              <th>Course Name</th>
-              <th>Credits</th>
-              </tr>";
-        
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-            echo "<td><a href=csdetail.php?".$row['courseNum'].">".$row['courseNum']."</a></td>";
-            echo "<td>" . $row['courseName'] . "</td>";
-            echo "<td>" . $row['credits'] . "</td>";
-            echo "</tr>";
+            
+         while($row = mysqli_fetch_array($result)){
+            echo $row['detail'];
+            echo "<p></p>";
         }
-        
-        echo "</table>";
         
         mysqli_close($conn);
     
-    ?> 
-        </h4>
+    ?>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
 <footer class="container-fluid text-center">
-    <p><a class="link" href="/cs490-capstone/courses.html#" title="Go to Courses">Back to Courses</a></p>
+    <p><a href="/cs490-capstone/cscourses.php#" title="Go to CS Courses">Back to CS Courses</a></p>
     <h5>
     <p>2300 Adams Avenue Scranton, PA 18509</p>
     <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>
     </h5>
-    <div>   <!-- socials -->
+    <div> <!-- socials -->
         <div class="fb-like" data-href="https://www.facebook.com/marywoodu/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
         <div class position="relative"><a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a></div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>

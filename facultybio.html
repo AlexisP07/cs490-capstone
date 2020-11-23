@@ -45,53 +45,68 @@
   <div class="row content">
     <div class="col-sm-2 sidenav"> </div>
     <div class="col-sm-8 text-center"> 
-      <h1>Faculty</h1>
+      <h1>Faculty Bios</h1>
       <h3>Mathematics & Computer Science Department</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
-    <h4>
-    <?php
-
-        $conn = mysqli_connect("localhost", "root", "", "capstone");
-        
-        if(! $conn){
-            die("Connection failed : ". mysqli_connect_error());
-        }
-
-        $sql = "CALL getAllFaculty";        /* selects all faculty info and formats in table */
-        $result = $conn->query($sql);
-
-        echo "<table border='1'>
-              <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Area</th>
-              <th>Office</th>
-              <th>Phone</th>
-              </tr>";
-        
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-            echo "<td>" . $row['Name'] . "</td>";
-            echo "<td>" . $row['Email'] . "</td>";
-            echo "<td>" . $row['Area'] . "</td>";
-            echo "<td>" . $row['Office'] . "</td>";
-            echo "<td>" . $row['Phone_Number'] . "</td>";
-            echo "</tr>";
-        }
-        
-        echo "</table>";
-        echo '<p></p>';
-        echo '<a href="/cs490-capstone/facultybio.html#">Faculty Bios</a>';
-        
-    mysqli_close($conn);
-    
-    ?> 
-        </h4>
+      <div class="bio">
+        <div> 
+          <img src="adhikari.jpg" alt="Adhikari" style="width:232px;height:284px;">
+        </div>
+        <div>
+          <dl><h4>
+            <dt>Dhanapati Adhikari</dt>
+              <dd><p></p></dd>
+              <dd>Associate Professor of Mathematics and Assistant Chairperson of the Science, Mathematics & Computer Science department</dd>
+              <dd><p></p></dd>
+              <dd>Research Area: Nonlinear Partial Differential Equation</dd>
+              <dd><p></p></dd>
+              <dd>Interests: Global Regularity Issue of the 2D Boussinesq Equations</dd>
+              <dd><p></p></dd>
+              <dd>Education: Ph.D. in Applied Mathematics: Oklahoma State University, Stillwater, OK</dd>
+          </dl></h4>
+        </div>
+      </div>
+      <hr style="height:3px;border-width:0;color:black;background-color:black">
+      <div class="bio">
+        <div>
+          <dl><h4>
+            <dt>Josh Carey</dt>
+              <dd><p></p></dd>
+              <dd>Per Annum</dd>
+              <dd><p></p></dd>
+              <dd>Interests: Topics of interest include Kac-Moody Lie Algebras, Vertex Operator Representations of Kac-Moody Lie Algebras, Applications of Lie Algebras to other branches of Mathematics</dd>
+              <dd><p></p></dd>
+              <dd>Research Area: Lie Algebras and Respresentation Theory</dd>
+              <dd><p></p></dd>
+              <dd>Education: MA is in Mathematics from SUNY Binghamton.</dd>
+          </dl></h4>
+        </div>
+      </div>
+      <hr style="height:3px;border-width:0;color:black;background-color:black">
+      <div class="bio">
+        <div>
+          <dl><h4>
+            <dt>Craig M. Johnson</dt>
+              <dd><p></p></dd>
+              <dd>Professor of Mathematics</dd>
+              <dd><p></p></dd>
+              <dd>Research Area: Topology, Connections of Mathematics to Music</dd>
+              <dd><p></p></dd>
+              <dd>Interests: Free actions on closed surfaces by finite groups, Obstructions to embeddings of simplicial complexes into manifolds, Connections of mathematics to music theory, Use of technology in teaching</dd>
+              <dd><p></p></dd>
+              <dd>Education: Ph.D. in Mathematics: Purdue University</dd>
+          </dl></h4>
+        </div>
+        <div> 
+          <img src="johnson.jpg" alt="Johnson" style="width:233px;height:286px;">
+        </div>
+      </div>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
 <footer class="container-fluid text-center">
+    <p><a href="/cs490-capstone/faculty.php#" title="Go to Faculty">Back to Faculty List</a></p>
     <h5>
     <p>2300 Adams Avenue Scranton, PA 18509</p>
     <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>

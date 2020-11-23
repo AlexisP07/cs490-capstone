@@ -2,7 +2,7 @@
  <head>
   <title>Login</title>
  </head>
- <body>
+<body>
 <?php  
      
     function check_user_exist($conn, $username){        /* function calls procedure, check if inserted username is in register db */

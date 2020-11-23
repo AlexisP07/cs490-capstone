@@ -16,7 +16,11 @@ ul {
     text-align:left;
 }
 
-/* table stylings */
+
+.link{
+    color: darkgreen;
+}
+
 table {         
     border: 3px solid black;
     width: 100%;
@@ -71,6 +75,12 @@ a {
     display: flex;
     align-items: center;
     color: seashell;
+}
+
+.bio {
+    display: flex;
+    align-items: flex-start;
+    color: black;
 }
 
 footer {
