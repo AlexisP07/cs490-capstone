@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course Suggestions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Google API font library-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap">
+    <link rel="stylesheet" href="addcourse.css">
+</head>
+<body>
+
+<form action="addcourse.php" method="post" > <!-- form, posting info to website -->
+  <div class="container">
+    <h1>Course Suggestions</h1>
+    <p>Please fill in the information for your suggested course addition.</p>       <!-- gathering info for course addition, flags when info not entered -->
+    <hr>
+
+    <label for="area"><b>Area</b></label>
+    <input type="text" placeholder="Enter Subject Area" name="area" id="area" required>
+
+    <label for="courseTitle"><b>Course Title</b></label>
+    <input type="text" placeholder="Enter Course Title" name="courseTitle" id="courseTitle" required>
+      
+    <label for="description"><b>Description</b></label>
+    <input type="text" placeholder="Enter Description" name="description" id="description" required>
+
+    <hr>
+
+    <button type="submit" class="addbtn" name="Add Course">Add Suggestion</button>
+    
+    <hr>
+    <p align="center"><a href="/cs490-capstone/courses.html#">Back to Courses</a></p>    <!-- links back to courses -->
+  </div>
+</form>
+
+</body>
+</html>

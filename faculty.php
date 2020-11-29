@@ -80,13 +80,15 @@
         }
         
         echo "</table>";
-        echo '<p></p>';
-        echo '<a href="/cs490-capstone/facultybio.html#">Faculty Bios</a>';
         
     mysqli_close($conn);
     
     ?> 
-        </h4>
+    </h4>
+    <h3>
+        <p></p>
+        <p><a href="/cs490-capstone/facultybio.html#">Faculty Bios</a></p>
+    </h3>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>

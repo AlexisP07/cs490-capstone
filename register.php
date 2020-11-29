@@ -22,8 +22,7 @@
     $passwordHash = password_hash($password, PASSWORD_BCRYPT);
 
     $conn = new mysqli('localhost', 'root', '', 'capstone');
-    if($conn->connect_error){
-
+    
     if(empty($_POST['email'])){
         die('Connection Failed : '.$conn->connect_error);
     }

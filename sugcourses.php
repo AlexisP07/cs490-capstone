@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Courses</title>
+  <title>Suggested Course Additions</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Bootstrap Template from w3school-->
@@ -18,7 +18,7 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="lyvpSC5L"></script>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header"> <!-- header with navigation areas -->
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -31,11 +31,11 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="/cs490-capstone/index.html#">Home</a></li>
-        <li class="active"><a href="/cs490-capstone/courses.html#">Courses</a></li> <!-- page currently on -->
-        <li><a href="/cs490-capstone/faculty.php#">Faculty</a></li>
+        <li class="active"><a href="/cs490-capstone/courses.html#">Courses</a></li> <!-- current page -->
+        <li><a href="/cs490-capstone/faculty.html#">Faculty</a></li>     
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
-    <ul class="nav navbar-nav navbar-right"> <!-- sign in / register area -->
+    <ul class="nav navbar-nav navbar-right">            <!-- login/register area -->
         <li><a href="/cs490-capstone/signin.html#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
@@ -45,32 +45,54 @@
   <div class="row content">
     <div class="col-sm-2 sidenav"> </div>
     <div class="col-sm-8 text-center"> 
-      <h1>Course List</h1>
-      <h3>Mathematics & Computer Science Department</h3> <!-- images acting as links, take to each specified area -->
+      <h1>Suggested Course Additions</h1>
+      <h3>Mathematics & Computer Science Department</h3>
         <hr style="height:3px;border-width:0;color:black;background-color:black">
-            <div class="row">
-              <div class="column">
-                <a href="/cs490-capstone/insccourses.php#" title="Go to Information Security Courses"><img src="infosec.jpg"></a>
-                <a href="/cs490-capstone/cscourses.php#" title="Go to Computer Science Courses"><img src="compsci.jpg"></a>
-              </div>
-              <div class="column">
-                <a href="/cs490-capstone/astronomycourses.php#" title="Go to Astronomy Courses"><img src="astronomy.jpg"></a>
-                <a href="/cs490-capstone/mathcourses.php#" title="Go to Mathematics Courses"><img src="math.jpg"></a>
-              </div>
-            </div>
-        <p></p>
-        <a href="/cs490-capstone/addcourse.html#" title="Add Suggested Courses">Suggest a course addition here.</a>
-        <p></p>
+    <h4>
+    <?php
+
+        $conn = mysqli_connect("localhost", "root", "", "capstone");
+        
+        if(! $conn){
+            die("Connection failed : ". mysqli_connect_error());
+        }
+
+        $sql = "CALL getSugCourses";        /* selects all suggested courses and formats in table */
+        $result = $conn->query($sql);
+
+        echo "<table border='1'>
+              <tr>
+              <th>Course Area</th>
+              <th>Title</th>
+              <th>Description</th>
+              </tr>";
+        
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+            echo "<td>" . $row['area'] . "</td>";
+            echo "<td>" . $row['title'] . "</td>";
+            echo "<td>" . $row['descrip'] . "</td>";
+            echo "</tr>";
+        }
+        
+        echo "</table>";
+        
+    mysqli_close($conn);
+    
+    ?> 
+    </h4>
     </div>
     <div class="col-sm-2 sidenav"> </div>
   </div>
 </div>
 <footer class="container-fluid text-center">
+    <h3><a href="/cs490-capstone/courses.html#">Back to Courses</a></h3>
+    <p></p>
     <h5>
-        <p>2300 Adams Avenue Scranton, PA 18509</p>
-        <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>
+    <p>2300 Adams Avenue Scranton, PA 18509</p>
+    <p>570-348-6211 | toll free: 1-TO-MARYWOOD</p>
     </h5>
-    <div> <!-- social medias -->
+    <div> <!-- socials -->
         <div class="fb-like" data-href="https://www.facebook.com/marywoodu/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
         <div class position="relative"><a href="https://twitter.com/MarywoodU?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @MarywoodU</a></div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
