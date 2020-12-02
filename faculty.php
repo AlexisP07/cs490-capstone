@@ -36,7 +36,7 @@
         <li><a href="/cs490-capstone/resources.html#">Resources</a></li>
       </ul>
     <ul class="nav navbar-nav navbar-right">            <!-- login/register area -->
-        <li><a href="/cs490-capstone/signin.html#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="/cs490-capstone/logform.php#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
